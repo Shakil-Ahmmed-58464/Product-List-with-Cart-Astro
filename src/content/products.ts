@@ -6,7 +6,7 @@ type Product = {
   image: string;
 };
 
-const products: Product[] = [
+export default const products: Product[] = [
   {
     id: 1,
     category: "Waffle",
