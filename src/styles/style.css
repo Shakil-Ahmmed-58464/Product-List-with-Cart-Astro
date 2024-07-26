@@ -1,0 +1,84 @@
+:root {
+  /* Colors */
+
+  --red: hsl(14, 86%, 42%);
+  --green: hsl(159, 69%, 38%);
+
+  --rose-50: hsl(20, 50%, 98%);
+  --rose-100: hsl(13, 31%, 94%);
+  --rose-300: hsl(14, 25%, 72%);
+  --rose-400: hsl(7, 20%, 60%);
+  --rose-500: hsl(12, 20%, 44%);
+  --rose-900: hsl(14, 65%, 9%);
+
+  /* Typography */
+
+  /* Body Copy */
+
+  /* --Font size (product names): 16px */
+
+  /* Font */
+
+  /* --Family: [Red Hat Text](https://fonts.google.com/specimen/Red+Hat+Text) */
+  --regular: 400;
+  --bold: 600;
+  --boldest: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Text";
+}
+
+body {
+  padding: 5rem;
+}
+
+.food-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.add-to-cart-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px calc(10px * 2);
+  border: 1px solid var(--red);
+  border-radius: 100vw;
+  color: var(--rose-900);
+  background-color: var(--rose-50);
+  /* TODO: Fix the not white bgc issue */
+  background-color: white;
+}
+
+.category {
+  color: var(--rose-500);
+}
+
+.name {
+  color: var(--rose-900);
+}
+
+.food-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+img.product-image {
+  border-radius: 10px;
+  display: block;
+  width: 300px;
+}
+
+.price {
+  color: var(--red);
+}
+
+.price::before {
+  content: "$";
+}
