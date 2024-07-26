@@ -1,0 +1,22 @@
+---
+import products from './path/to/products.ts';
+---
+
+<html>
+  <head>
+    <title>Product List</title>
+  </head>
+  <body>
+    <h1>Product List</h1>
+    <ul>
+      {products.map(({ id, category, name, price, image }) => (
+        <li key={id}>
+          <h2>{name}</h2>
+          <p>Category: {category}</p>
+          <p>Price: ${price}</p>
+          <img src={image} alt={name} />
+        </li>
+      ))}
+    </ul>
+  </body>
+</html>
