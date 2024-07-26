@@ -3,42 +3,46 @@ import products from './path/to/products.ts';
 ---
 
 <html>
-<head>
-  <title>Product List</title>
-</head>
-<body>
-  <h1>Product List</h1>
-
-  <main>
-    <div class="desserts">
-      <h1>Desserts</h1>
-      <br />
-    <div class="food-card-grid">
-      {products.map(({
-        id, category, name, price, image
-      }) => (
-        <div class="food-card" key={id}>
-          <img
-          class="product-image"
-          src={`/assets/images/${image}` }
-        alt={name}
-        />
-        <button class="add-to-cart-btn">
-          <img src="/assets/images/icon-add-to-cart.svg" alt="Cart Icon" />
-        <span class="add">Add To Cart</span>
-      </button>
-      <div class="food-info">
-        <p class="category">
-          {category}
-      </p>
-      <h4 class="name">{name}</h4>
-    <h4 class="price">${price}</h4>
-</div>
-</div>
-))}
-</div>
-</div>
-<div class="cart"></div>
-</main>
-</body>
+  <head>
+    <title>Product List</title>
+  </head>
+  <body>
+    
+        <main>
+      <div class="desserts">
+        <h1>Desserts</h1>
+        <br />
+        <div class="food-card-grid">
+      {products.map(({ id, category, name, price, image }) => (
+          <div class="food-card" key={id}>
+            <img
+              class="product-image"
+              src={`assets/images/${image}`}
+              alt={name}
+            />
+            <button class="add-to-cart-btn">
+              <img src="/assets/images/icon-add-to-cart.svg" alt="Cart Icon" />
+              <span class="add">Add To Cart</span>
+            </button>
+            <div class="food-info">
+              <p class="category">{category}</p>
+              <h4 class="name">{name}</h4>
+              <h4 class="price">${price}</h4>
+            </div>
+          </div>
+      ))}
+        </div>
+      </div>
+      <div class="cart"></div>
+    </main>
+    <h1>Product List</h1>
+    <ul>
+        <li key={id}>
+          <h2>{name}</h2>
+          <p>Category: {category}</p>
+          <p>Price: ${price}</p>
+          <img src={image} alt={name} />
+        </li>
+    </ul>
+  </body>
 </html>
